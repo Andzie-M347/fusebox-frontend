@@ -14,7 +14,9 @@
 @import './mixins';
 
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
 /// RESETS
 
@@ -25,7 +27,7 @@ html {
 body {
     font-size: 1.5rem;
     box-sizing: border-box;
-    color: $color;
+    // color: $color;
     font-family: $text-font-stack;
 }
 
