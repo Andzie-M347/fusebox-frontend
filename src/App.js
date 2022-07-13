@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import '@/assets/main.scss'
+import '@/assets/sass/main.scss'
 
 import { Login } from '@/pages/auth/login'
 import { Dashboard } from '@/pages/dashboard'
