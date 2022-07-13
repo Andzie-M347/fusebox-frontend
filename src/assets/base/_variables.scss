@@ -1,3 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+//
+
+/// Copy text color
+/// @type Fonts
+$text-font-stack: 'Lato', sans-serif;
+
+/// Copy text color
+/// @type Color
 $color: red;
 $text-color: rgba(0, 0, 0, 0.75);
-$text-font: 'Lato', sans-serif;
+
+$light-black: #40454c;
+$mild-black: #4b4e54;
+$accent-black: #42444b;
+$brown: #ac856a;
+$white: #fff;
+$bg-gray: #818288;
+$text-gray: #434548;

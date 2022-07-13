@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+//
+
 *,
 *::after,
 *::before {
@@ -7,11 +11,12 @@
 }
 
 @import './variables';
+@import './mixins';
 
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-// RESETS
+/// RESETS
 
 html {
     font-size: 62.5%;
@@ -21,10 +26,15 @@ body {
     font-size: 1.5rem;
     box-sizing: border-box;
     color: $color;
-    font-family: $text-font;
+    font-family: $text-font-stack;
 }
 
 a {
     text-decoration: none;
     color: $text-color;
+
+    @include on-event {
+        color: $text-color;
+        text-decoration: underline;
+    }
 }
