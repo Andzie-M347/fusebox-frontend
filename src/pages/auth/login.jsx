@@ -7,6 +7,7 @@ import { authPending, authSuccess, authFail } from '@/redux/slices/authSlice'
 import { Spinner } from '@/components/ui/spinner'
 import axios from '@/lib/axios'
 import { ErrorMessage } from '@/components/ui/errorMessage'
+import { useForm } from '@/hooks/useForm'
 
 export const Login = () => {
     const [state, setState] = useState({
@@ -14,16 +15,18 @@ export const Login = () => {
         password: '',
     })
 
+    const { onInputChange, values } = useForm()
+
     const dispatch = useDispatch()
     const { loading, loggedIn, error } = useSelector(state => state.auth)
 
-    const handleChange = e => {
-        const { name, value } = e.target
-        setState(prevState => ({
-            ...prevState,
-            [name]: value,
-        }))
-    }
+    // const handleChange = e => {
+    //     const { name, value } = e.target
+    //     setState(prevState => ({
+    //         ...prevState,
+    //         [name]: value,
+    //     }))
+    // }
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -33,8 +36,8 @@ export const Login = () => {
         await axios.get('/sanctum/csrf-cookie').then(() => {
             axios
                 .post('/api/login', {
-                    email: state.email,
-                    password: state.password,
+                    email: values.email,
+                    password: values.password,
                 })
                 .then(response => {
                     if (response.data.status === 'success') {
@@ -69,8 +72,8 @@ export const Login = () => {
                             name="email"
                             placeholder="example@gmail.com"
                             className="form-control"
-                            value={state.email}
-                            onChange={handleChange}
+                            value={values.email}
+                            onChange={onInputChange}
                         />
                     </div>
                     <div className="form-group  password">
@@ -80,8 +83,8 @@ export const Login = () => {
                             name="password"
                             placeholder="8+ characters"
                             className="form-control"
-                            value={state.password}
-                            onChange={handleChange}
+                            value={values.password}
+                            onChange={onInputChange}
                         />
                     </div>
 
