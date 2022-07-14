@@ -1,3 +1,4 @@
 @import './base/resets', './base/variables', './base/mixins';
 @import './layouts/wrapper', './layouts/navigation.scss', './layouts/welcome';
+@import './components/animations', './components/spinner';
 @import './pages/login';
