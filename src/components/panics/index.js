@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getPanics } from '@/redux/actions/panicsAction'
+import { Container } from '../ui/container'
 
 export const Panics = () => {
     const [dispatchPanics, setDispatchPanics] = useState([])
@@ -10,5 +11,9 @@ export const Panics = () => {
         dispatch(getPanics())
     }, [dispatchPanics])
 
-    return <div>Panics</div>
+    return (
+        <Container>
+            <small> Search </small>
+        </Container>
+    )
 }

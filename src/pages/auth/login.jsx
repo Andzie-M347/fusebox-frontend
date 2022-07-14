@@ -6,7 +6,7 @@ import Image from '@/assets/images/illustration.png'
 
 export const Login = () => {
     return (
-        <div className="login-screen">
+        <section className="login-screen">
             <div className="login-screen__left">
                 <img src={Image} alt="Login" />
             </div>
@@ -57,6 +57,6 @@ export const Login = () => {
                     </span>
                 </footer>
             </div>
-        </div>
+        </section>
     )
 }

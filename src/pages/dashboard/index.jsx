@@ -1,12 +1,14 @@
 import React from 'react'
-import { Panics } from './panics'
+
+import { Layout } from '@/layouts'
+import { Welcome } from '@/components/ui/welcome'
+import { Panics } from '@/components/panics'
 
 export const Dashboard = () => {
     return (
-        <div>
-            <h4> Dashboard</h4>
-
+        <Layout>
+            <Welcome />
             <Panics />
-        </div>
+        </Layout>
     )
 }
