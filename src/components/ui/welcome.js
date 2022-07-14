@@ -6,12 +6,12 @@ export const Welcome = () => {
         <Container>
             <section className="welcome">
                 <div className="welcome__header">
-                    <h3 className="">
-                        <span> Good Morning,</span>
-                        <span> Andzie Mabaso</span>
+                    <h3 className="title">
+                        <span className="title__main"> Good Morning,</span>
+                        <span className="title__sub"> {'username'}</span>
                     </h3>
 
-                    <p> Welcome to ArvanNex Panic system</p>
+                    <p> Welcome to Donotpanic system</p>
                 </div>
 
                 <div className="welcome__action">

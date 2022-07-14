@@ -9,7 +9,8 @@ $text-font-stack: 'Montserrat', sans-serif;
 
 /// Copy text color
 /// @type Color
-$color: red;
+$accent-color: #6e72fc;
+$secondary-color: #ad1deb;
 $text-color: rgba(0, 0, 0, 0.75);
 
 $light-black: #40454c;
@@ -18,4 +19,10 @@ $accent-black: #42444b;
 $brown: #ac856a;
 $white: #fff;
 $bg-gray: #818288;
-$text-gray: #434548;
+$text-grey: #9f9fb7;
+// $text-gray: #434548;
+
+/// Copy text color
+/// @type Misc
+
+$box-shadow-border: rgb(0 0 0 / 10%) 0px 1px 0px;

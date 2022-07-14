@@ -3,4 +3,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+
+    box-shadow: $box-shadow-border;
+
+    p {
+        color: $text-grey;
+    }
+
+    .title {
+        font-size: 2.2rem;
+
+        &__sub {
+            font-weight: 300 !important;
+        }
+    }
 }
