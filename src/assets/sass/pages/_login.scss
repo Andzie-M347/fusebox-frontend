@@ -8,21 +8,21 @@
                 color: #2e2f2e;
             }
             p {
-                color: #9f9fb7;
+                color: $text-grey;
                 font-size: 1.3rem;
             }
         }
     }
 
     &__footer {
-        color: #9f9fb7;
+        color: $text-grey;
         span {
             height: 3.75rem;
             width: 3.75rem;
             border-radius: 50%;
             display: inline-block;
             line-height: 3.75rem;
-            border: 1px solid #9f9fb7;
+            border: 1px solid $text-grey;
             text-align: center;
 
             margin: 0.5rem;
@@ -46,7 +46,7 @@
         }
 
         svg {
-            color: #9f9fb7;
+            color: $text-grey;
         }
     }
 }
@@ -82,14 +82,14 @@
 input {
     display: block;
     width: 100%;
-    border-radius: 0.8rem !important;
-    border: 1px solid #9f9fb7;
+    border-radius: 0.8rem;
+    border: 1px solid $text-grey;
     font-size: 1.5rem;
     padding: 15px;
 
     &::placeholder {
         font-weight: 200;
-        color: #9f9fb7;
+        color: $text-grey;
     }
 }
 
@@ -115,7 +115,7 @@ label {
     height: 20px;
     width: 20px;
     z-index: 99;
-    color: #9f9fb7;
+    color: $text-grey;
 }
 
 .button {

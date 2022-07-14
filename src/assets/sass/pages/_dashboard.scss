@@ -1,0 +1,45 @@
+.panics-section {
+    position: relative;
+    padding: 3rem 0;
+
+    &__search {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid $text-grey;
+        width: 18rem;
+
+        svg {
+            color: $text-grey;
+        }
+    }
+
+    &__chat {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+
+        span {
+            height: 5.325rem;
+            width: 5.325rem;
+            line-height: 6.325rem;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+
+            box-shadow: 0px 10px 15px -3px rgba(173, 29, 235, 0.3);
+            background: $secondary-color;
+        }
+
+        svg {
+            height: 2.225rem;
+            width: 2.225rem;
+            stroke: #fff;
+        }
+    }
+
+    input {
+        width: unset;
+        border: unset;
+        border-radius: unset;
+    }
+}

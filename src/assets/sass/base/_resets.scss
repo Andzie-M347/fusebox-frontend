@@ -28,6 +28,7 @@ body {
     font-size: 1.5rem;
     box-sizing: border-box;
     // color: $color;
+    line-height: 1.5;
     font-family: $text-font-stack;
 }
 
@@ -38,5 +39,14 @@ a {
     @include on-event {
         color: $text-color;
         text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $light-black;
     }
 }

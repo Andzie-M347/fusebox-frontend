@@ -1,7 +1,32 @@
 .navigation {
-    padding: 20px 0;
+    padding: 15px 0;
+    box-shadow: $box-shadow-border;
+    background: #fcfcfc;
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        a {
+            font-weight: 500;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        span {
+            padding-right: 2.3rem;
+        }
+        svg {
+            height: 3rem;
+            width: 3rem;
+        }
+        img {
+            border: 2px solid $accent-color;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+        }
     }
 }
