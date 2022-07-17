@@ -1,21 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    panics: [],
+    user: null,
     loading: false,
     error: null,
 }
 
 const panicsSlice = createSlice({
-    name: 'panics',
+    name: 'user',
     initialState,
     reducers: {
-        setLoading: state => state.loading,
-        setSuccess: (state, action) => {
-            state.panics = action.payload
+        setUserLoading: state => state.loading,
+        setUserSuccess: (state, { payload }) => {
+            state.user = payload
             state.loading = false
         },
-        setPanicFailure: (state, action) => {
+        setUserFailure: (state, action) => {
             state.loading = false
             state.error = action.payload
         },
@@ -24,6 +24,6 @@ const panicsSlice = createSlice({
 
 const { reducer, actions } = panicsSlice
 
-export const { setPanicFailure, setLoading, setSuccess } = actions
+export const { setUserFailure, setUserLoading, setUserSuccess } = actions
 
 export default reducer

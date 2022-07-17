@@ -1,23 +1,25 @@
+import axios from '@/lib/axios'
 import {
     setPanicFailure,
     setLoading,
     setSuccess,
 } from '@/redux/slices/panicsSlice'
-import axios from 'axios'
 
 export const getPanics = () => async dispatch => {
-    dispatch(setLoading)
+    // dispatch(setLoading())
 
     try {
         /// Fetch from api
-        const result = await axios.get('http://', {
+        const result = await axios.get('/api/panics', {
             headers: {
                 Authorization: 'Bearer ',
             },
         })
 
-        console.log(result)
+        const { panics } = result.data.data
+
+        dispatch(setSuccess(panics))
     } catch (error) {
-        dispatch(setPanicFailure(error))
+        dispatch(setPanicFailure(error.message))
     }
 }

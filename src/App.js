@@ -5,6 +5,7 @@ import { Login } from '@/pages/auth/login'
 import { Dashboard } from '@/pages/dashboard'
 import { PrivateRoutes } from '@/routes/privateRoutes'
 import { useSelector } from 'react-redux'
+import { AddPanic } from './pages/dashboard/addPanic'
 
 const App = () => {
     const { loggedIn } = useSelector(state => state.auth)
@@ -16,6 +17,7 @@ const App = () => {
 
                 <Route element={<PrivateRoutes loggedIn={loggedIn} />}>
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/add-panic" element={<AddPanic />} />
                 </Route>
             </Routes>
         </Router>

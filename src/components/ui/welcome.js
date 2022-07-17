@@ -1,7 +1,10 @@
 import React from 'react'
 import { Container } from './container'
+import { useNavigate } from 'react-router-dom'
 
 export const Welcome = () => {
+    const navigate = useNavigate()
+
     return (
         <Container>
             <section className="welcome">
@@ -15,7 +18,9 @@ export const Welcome = () => {
                 </div>
 
                 <div className="welcome__action">
-                    <button className="button button__primary">
+                    <button
+                        className="button button__primary"
+                        onClick={() => navigate('/add-panic')}>
                         New Panic
                     </button>
                 </div>
