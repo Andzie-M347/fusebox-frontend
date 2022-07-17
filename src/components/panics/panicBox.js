@@ -14,7 +14,7 @@ export const PanicBox = ({ panic_type, details, user, date, id }) => {
             <div className="panic__footer">
                 <div className="panic__footer--left"></div>
                 <div className="panic__footer--right">
-                    <button className="btn">{date}</button>
+                    <button className="badge">{date}</button>
                 </div>
             </div>
         </figure>

@@ -29,33 +29,32 @@ export const Dashboard = () => {
         getUser()
     }, [])
 
-    useEffect(() => {
-        const getLocation = () => {
-            if (!navigator.geolocation) {
-                setStatus('Geolocation is not supported by your browser')
-            } else {
-                setStatus('Locating...')
-                navigator.geolocation.getCurrentPosition(
-                    position => {
-                        setStatus(null)
-                        setLat(position.coords.latitude)
-                        setLng(position.coords.longitude)
-                    },
-                    () => {
-                        setStatus('Unable to retrieve your location')
-                    },
-                )
-            }
-        }
+    // useEffect(() => {
+    //     const getLocation = () => {
+    //         if (!navigator.geolocation) {
+    //             setStatus('Geolocation is not supported by your browser')
+    //         } else {
+    //             setStatus('Locating...')
+    //             navigator.geolocation.getCurrentPosition(
+    //                 position => {
+    //                     setStatus(null)
+    //                     setLat(position.coords.latitude)
+    //                     setLng(position.coords.longitude)
+    //                 },
+    //                 () => {
+    //                     setStatus('Unable to retrieve your location')
+    //                 },
+    //             )
+    //         }
+    //     }
 
-        getLocation()
-    }, [lat, lng])
+    //     getLocation()
+    // }, [lat, lng])
 
     return (
         <Layout>
             <Welcome />
 
-            <p> {status}</p>
             <Panics />
         </Layout>
     )

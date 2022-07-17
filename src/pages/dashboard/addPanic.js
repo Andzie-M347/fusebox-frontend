@@ -7,7 +7,9 @@ export const AddPanic = () => {
     return (
         <Layout>
             <Container>
-                <h4> AddPanic</h4>
+                <header className="page-header">
+                    <h2> Add a new panic</h2>
+                </header>
 
                 <AddPanicForm />
             </Container>

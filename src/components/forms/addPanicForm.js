@@ -24,7 +24,10 @@ export const AddPanicForm = () => {
                 />
             </div>
             <div className="form-group">
-                <button type="submit"> Send Panic</button>
+                <button type="submit" className="button button__primary">
+                    {' '}
+                    Send Panic
+                </button>
             </div>
         </form>
     )

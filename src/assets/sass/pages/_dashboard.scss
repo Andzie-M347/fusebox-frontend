@@ -8,6 +8,17 @@
         border-bottom: 2px solid $text-grey;
         width: 18rem;
 
+        input {
+            border: none;
+            background: transparent;
+
+            &:focus-visible,
+            &::placeholder {
+                border: none;
+                background: transparent;
+            }
+        }
+
         svg {
             color: $text-grey;
         }
@@ -42,4 +53,14 @@
         border: unset;
         border-radius: unset;
     }
+
+    &__content {
+        padding: 3rem 0;
+    }
+}
+
+// General page header
+
+.page-header {
+    padding: 2rem 0;
 }
