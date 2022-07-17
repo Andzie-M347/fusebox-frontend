@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
 import Image from '@/assets/images/illustration.png'
@@ -16,7 +16,7 @@ export const Login = () => {
     const { onInputChange, values } = useForm()
 
     const dispatch = useDispatch()
-    const { loading, loggedIn, error } = useSelector(state => state.auth)
+    const { loading, error } = useSelector(state => state.auth)
 
     const handleSubmit = async e => {
         e.preventDefault()
