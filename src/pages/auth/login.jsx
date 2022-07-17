@@ -8,25 +8,15 @@ import { Spinner } from '@/components/ui/spinner'
 import axios from '@/lib/axios'
 import { ErrorMessage } from '@/components/ui/errorMessage'
 import { useForm } from '@/hooks/useForm'
+import { useNavigate } from 'react-router-dom'
 
 export const Login = () => {
-    const [state, setState] = useState({
-        email: '',
-        password: '',
-    })
+    const navigate = useNavigate()
 
     const { onInputChange, values } = useForm()
 
     const dispatch = useDispatch()
     const { loading, loggedIn, error } = useSelector(state => state.auth)
-
-    // const handleChange = e => {
-    //     const { name, value } = e.target
-    //     setState(prevState => ({
-    //         ...prevState,
-    //         [name]: value,
-    //     }))
-    // }
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -43,12 +33,14 @@ export const Login = () => {
                     if (response.data.status === 'success') {
                         dispatch(authSuccess())
 
-                        console.log(response.data)
+                        navigate('/dashboard')
                     } else {
-                        dispatch(authFail(response.data.message))
+                        dispatch(authFail(response.message))
                     }
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    dispatch(authFail(err.response.message))
+                })
         })
     }
 
