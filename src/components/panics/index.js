@@ -16,8 +16,6 @@ export const Panics = () => {
         dispatch(getPanics())
     }, [dispatch])
 
-    console.log(panics)
-
     return (
         <Container>
             <section className="panics-section">
@@ -41,7 +39,7 @@ export const Panics = () => {
                 <div className="panics-section__content">
                     <div className="row">
                         {panics.map(panic => (
-                            <div className="col-xs" key={panic.id}>
+                            <div className="col-xs mb-2" key={panic.id}>
                                 <PanicBox
                                     id={panic?.id}
                                     details={panic?.details}
