@@ -9,23 +9,20 @@ export const AddPanic = () => {
     const [lng, setLng] = useState(null)
 
     const getLocation = () => {
-        if (!navigator.geolocation) {
-        } else {
-            navigator.geolocation.getCurrentPosition(
-                position => {
-                    setLat(position.coords.latitude.toString())
-                    setLng(position.coords.longitude.toString())
-                },
-                () => {},
-            )
-        }
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                setLat(position.coords.latitude.toString())
+                setLng(position.coords.longitude.toString())
+            },
+            () => {},
+        )
     }
 
     useEffect(() => {
         getLocation()
     }, [lat, lng])
 
-    console.log(typeof lat)
+    console.log(lat, lng)
 
     return (
         <Layout>

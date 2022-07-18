@@ -16,6 +16,8 @@ export const Panics = () => {
         dispatch(getPanics())
     }, [dispatch])
 
+    console.log(panics)
+
     return (
         <Container>
             <section className="panics-section">
