@@ -87,6 +87,7 @@ textarea {
     border: 1px solid $text-grey;
     font-size: 1.5rem;
     padding: 15px;
+    font-family: inherit;
 
     &::placeholder {
         font-weight: 200;
