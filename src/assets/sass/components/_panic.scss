@@ -16,13 +16,25 @@
             font-size: 2rem;
         }
     }
+}
 
-    .badge {
-        margin-top: 1.5rem;
-        border-radius: 9rem;
-        background-color: $accent-color;
-        padding: 0.4rem 2rem;
-        color: $white;
-        border: none;
+.badge {
+    margin-top: 1.5rem;
+    border-radius: 9rem;
+    background-color: $accent-color;
+    padding: 0.4rem 2rem;
+    display: flex;
+    align-items: center;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: darken($accent-color, 0.8);
+    }
+
+    svg path {
+        stroke: $white;
     }
 }

@@ -73,7 +73,7 @@ export const Login = () => {
                         <input
                             type="password"
                             name="password"
-                            placeholder="8+ characters"
+                            placeholder="6+ characters"
                             className="form-control"
                             value={values.password}
                             onChange={onInputChange}

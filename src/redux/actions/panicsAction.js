@@ -1,7 +1,7 @@
 import axios from '@/lib/axios'
 import {
     setPanicFailure,
-    setLoading,
+    // setLoading,
     setSuccess,
 } from '@/redux/slices/panicsSlice'
 
